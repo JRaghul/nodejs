@@ -27,14 +27,24 @@ data = [
     }
 ]
 var mapValues = lodash.mapValues(data, (o) => {return o.title});
-console.log(mapValues) // mapvales in lodash
+// console.log(mapValues) // mapvales in lodash
 //foreach in lodash
 var foreach = lodash.forEach(data, (i)=> {
     var count = i.rating.count;
     var add = lodash.add(1 + count);// add in lodash
-    console.log(add)
+    // console.log(add)
 })
-console.log(foreach);
+// console.log(foreach);
 
 
 
+const getdatafunctionality = require('./calculator/functionality.js');
+console.log(getdatafunctionality.value);
+console.log(getdatafunctionality.add(100,50),'add')
+console.log(getdatafunctionality.subtract(100,50),'subtract')
+console.log(getdatafunctionality.multiply(100,50),'multiply')
+console.log(getdatafunctionality.divide(100,50),'divide');
+
+getdatafunctionality.calculate(5, 3, results => {
+    console.log(results);
+});
